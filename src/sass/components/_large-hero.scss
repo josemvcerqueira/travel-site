@@ -1,0 +1,68 @@
+.large-hero {
+	position: relative;
+
+	&__text-content {
+		@include center;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		@include font-color-weight;
+		letter-spacing: 0.1rem;
+		font-size: 2rem;
+
+		@include respond(ipad) {
+			font-size: 4rem;
+		}
+
+		@include respond(ipadPro) {
+			font-size: 5rem;
+		}
+
+		@include respond(large) {
+			font-size: 6rem;
+		}
+	}
+
+	&__subtitle {
+		@include font-color-weight;
+		letter-spacing: 0.1rem;
+		font-size: 1.5rem;
+
+		@include respond(ipad) {
+			font-size: 3rem;
+		}
+
+		@include respond(ipadPro) {
+			font-size: 4rem;
+		}
+
+		@include respond(large) {
+			font-size: 5rem;
+		}
+	}
+
+	&__paragraph {
+		@include small-padding;
+		color: $light-color-1;
+		font-size: 2rem;
+		font-weight: 100;
+		text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+
+		@include respond(ipad) {
+			font-size: 1.5rem;
+		}
+
+		@include respond(ipadPro) {
+			font-size: 2.5rem;
+		}
+
+		@include respond(large) {
+			font-size: 3.5rem;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  //defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
