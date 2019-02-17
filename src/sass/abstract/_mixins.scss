@@ -16,37 +16,35 @@
 
 // MEDIA QUERY MANAGER
 /*
-0 - 600 px: Mobile
-600 - 900px: Tablet portrait
-900 - 1200px: Tablet landscape
-[1200 - 1800] is where our normal styles apply
-10800px +: Big Deskstop
+0 - 530 px: default;
+530px - 1024px: ipad
+1024px - 1800px: ipadPro
+1800px+: large
 
 $breakpoint argument choices:
-- mobile
-- tab-port
-- tab-land
-- big-desktop
+- ipad
+- ipadpro
+- large
 
 1em = 16px
 */
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == ipad {
-		@media only screen and (min-width: 33.125em) {
+		@media only screen and (min-width: em(530)) {
 			@content;
-		} //530px
+		}
 	}
 
 	@if $breakpoint == ipadPro {
-		@media only screen and (min-width: 64em) {
+		@media only screen and (min-width: em(1024)) {
 			@content;
-		} //1024
+		}
 	}
 
 	@if $breakpoint == large {
-		@media only screen and (min-width: 112.6em) {
+		@media only screen and (min-width: em(1080px)) {
 			@content;
-		} //1800px
+		}
 	}
 }

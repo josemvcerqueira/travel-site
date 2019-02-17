@@ -1,0 +1,6 @@
+$browser-context: 16; // Default
+//1em = 16px
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
