@@ -10,7 +10,10 @@
 	}
 
 	&--large {
-		font-size: 1.5rem;
 		padding: 1.3rem 2rem;
+
+		@include respond(ipad) {
+			font-size: 1.5rem;
+		}
 	}
 }
