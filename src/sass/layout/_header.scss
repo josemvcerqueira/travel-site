@@ -52,7 +52,7 @@
 	}
 
 	&__paragraph {
-		@include small-padding;
+		@extend %small-padding;
 		color: $light-color-1;
 		font-size: 1.5rem;
 		font-weight: 100;

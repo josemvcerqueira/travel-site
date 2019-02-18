@@ -2,10 +2,25 @@
 	margin: 0;
 }
 
+.margin-top {
+	margin-top: 2rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.center-images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
 .center {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-items: center;
 }
 
 .wrapper {
@@ -16,8 +31,20 @@
 	margin-left: auto;
 }
 
-.margin-vertical {
+.padding-vertical {
 	padding: 4.5rem 0;
+
+	@include respond(ipad) {
+		padding: 5.5rem 0;
+	}
+
+	@include respond(ipadPro) {
+		padding: 6.5rem 0;
+	}
+
+	@include respond(large) {
+		padding: 8rem 0;
+	}
 }
 
 .bg-blue {

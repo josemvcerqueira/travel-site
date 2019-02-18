@@ -1,3 +1,4 @@
+@import "abstract/extends";
 @import "abstract/functions";
 @import "abstract/mixins";
 @import "abstract/variables";
@@ -8,7 +9,9 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/headline";
 
 @import "layout/header";
+@import "layout/our-beginnings";
 
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";

@@ -10,10 +10,6 @@
 	color: $primary-blue;
 }
 
-@mixin small-padding {
-	padding: 2rem;
-}
-
 // MEDIA QUERY MANAGER
 /*
 0 - 530 px: default;
@@ -36,13 +32,13 @@ $breakpoint argument choices:
 	}
 
 	@if $breakpoint == ipadPro {
-		@media only screen and (min-width: em(1024)) {
+		@media only screen and (min-width: em(1100)) {
 			@content;
 		}
 	}
 
 	@if $breakpoint == large {
-		@media only screen and (min-width: em(1080px)) {
+		@media only screen and (min-width: em(1500)) {
 			@content;
 		}
 	}

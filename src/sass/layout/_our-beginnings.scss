@@ -1,0 +1,48 @@
+.beginning {
+	&__image {
+		@include respond(ipadPro) {
+			flex-basis: 33%;
+		}
+	}
+
+	&__text {
+		margin-top: 2rem;
+		text-align: justify;
+
+		@include respond(ipadPro) {
+			margin-top: 0rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		@include respond(large) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__paragraph {
+		margin-top: 2rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+
+		@include respond(ipadPro) {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+.row {
+	text-align: center;
+	@include respond(ipadPro) {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&-gutter > div {
+		@include respond(ipadPro) {
+			padding-left: 5rem;
+		}
+	}
+}
