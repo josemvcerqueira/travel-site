@@ -2,3 +2,23 @@ body {
 	font-family: "Roboto", "sans-serif";
 	color: #333;
 }
+.beginning {	
+
+	&__paragraph {
+		margin-top: 2rem;
+		font-size: 1.2rem;
+		line-height: 1.5;
+		text-align: justify;
+		font-weight: 300;
+
+		@include respond(ipadPro) {
+			font-size: 1.6rem;
+			line-height: 1.5;
+			margin-top: 0;
+		}
+	}
+
+&__paragraph a {
+	font-weight: 700;
+	}
+}

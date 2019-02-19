@@ -1,13 +1,12 @@
 .beginning {
 	&__image {
 		@include respond(ipadPro) {
-			flex-basis: 33%;
+			flex-basis: 37%;
 		}
 	}
 
 	&__text {
 		margin-top: 2rem;
-		text-align: justify;
 
 		@include respond(ipadPro) {
 			margin-top: 0rem;
@@ -15,6 +14,7 @@
 			flex-direction: column;
 			justify-content: space-around;
 			align-items: center;
+			flex-basis: 65%;
 		}
 
 		@include respond(large) {
@@ -24,20 +24,16 @@
 
 	&__paragraph {
 		margin-top: 2rem;
-		font-size: 1.2rem;
-		line-height: 1.5;
-
-		@include respond(ipadPro) {
-			font-size: 1.6rem;
-		}
 	}
 }
 
 .row {
 	text-align: center;
+	margin-top: 2rem;
 	@include respond(ipadPro) {
 		display: flex;
 		flex-direction: row;
+		margin-top: 0;
 	}
 
 	&-gutter > div {
