@@ -1,0 +1,113 @@
+h2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@include respond(ipad) {
+		display: block;
+		}
+}
+
+.features {
+	width: 50%;
+
+	@include respond(ipadPro) {
+		width: auto;
+		}
+
+	&__title {
+		font-size: 4.5rem;
+		text-align: center;
+		margin-bottom: 5rem;
+		margin-top: 1rem;
+		font-weight: 300;
+	}
+
+	&__icon {
+		vertical-align: text-bottom;
+		margin-right: 1rem;
+
+		@include respond(ipadPro) {
+			vertical-align: text-bottom;
+			margin-right: 1rem;
+		}
+	}
+
+	&__layout {
+		display: flex;
+		flex-wrap: wrap;
+
+		.features__container:not(:first-child) {
+			margin-top: 5rem;
+			}
+
+		@include respond(ipadPro) {
+		.features__container:not(:first-child) {
+			margin-top: 0;
+			}
+		}
+	}
+
+	&__container {
+		text-align: center;
+
+		@include respond(ipadPro) {
+		flex-basis: 50%;
+		padding: 4rem;
+		display: flex;
+		flex-direction: row;
+		}
+
+		&__heading {
+			font-size: 2.5rem;
+			font-weight: 400;
+			letter-spacing: 2px;
+			margin-bottom: 1rem;
+
+			@include respond(ipadPro) {
+			text-align: left;
+				}
+		}
+
+		&__paragraph {
+			padding-top: 1rem;
+			font-size: 1.5rem;
+			line-height: 1.65;
+			font-weight: 300; 
+
+			@include respond(ipadPro) {
+			text-align: left;
+				}
+		}
+
+		&__img {
+			margin-bottom: 1rem;
+			width: 5rem;
+			height: auto;
+
+			@include respond(ipadPro) {
+			height: 45%;
+			width: auto;
+			padding: 0 2rem;
+			}
+		}
+
+		&-1 {
+			order: 1;
+		}
+
+		&-2 {
+			order: 2;
+		}
+
+		&-3 {
+			order: 3;
+		}
+
+		&-4 {
+			order: 4;
+		}
+	}
+
+
+}
