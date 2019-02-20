@@ -31,6 +31,18 @@ $breakpoint argument choices:
 		}
 	}
 
+	@if $breakpoint == small {
+		@media only screen and (max-width: em(480)) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == special {
+		@media only screen and (max-width: em(1100)) {
+			@content;
+		}
+	}
+
 	@if $breakpoint == ipadPro {
 		@media only screen and (min-width: em(1100)) {
 			@content;

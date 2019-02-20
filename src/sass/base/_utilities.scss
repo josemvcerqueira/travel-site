@@ -6,8 +6,21 @@
 	margin-top: 4rem;
 
 	@include respond(ipadPro) {
-			margin-top: 5.5rem;
+		margin-top: 5.5rem;
+	}
+
+	&--title {
+		transition: all 0.3s ease-in;
+		margin-top: 13rem;
+
+		@include respond(ipadPro) {
+			margin-top: 8rem;
 		}
+
+		@include respond(ipadPro) {
+			margin-top: 0;
+		}
+	}
 }
 
 .margin-top--small {
@@ -25,8 +38,8 @@
 	width: 100%;
 
 	@include respond(ipadPro) {
-			margin-bottom: 6rem;
-		}
+		margin-bottom: 6rem;
+	}
 }
 
 .wrapper {

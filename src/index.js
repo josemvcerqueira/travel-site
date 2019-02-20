@@ -1,5 +1,5 @@
 import "./sass/main.scss";
+import MobileMenu from "./modules/MobileMenu";
 
-let add = (a, b) => a + b;
-
-console.log(add(1, 20));
+const mobileMenu = new MobileMenu();
+mobileMenu.events();
