@@ -9,7 +9,6 @@ h2 {
 }
 
 .features {
-	width: 50%;
 
 	@include respond(ipadPro) {
 		width: auto;

@@ -1,6 +1,10 @@
 body {
 	font-family: "Roboto", "sans-serif";
 	color: #333;
+
+	strong {
+		font-weight: 500;
+	}
 }
 .beginning {	
 
@@ -30,8 +34,5 @@ body {
 			font-size: 4.5rem;
 			font-weight: 300;
 			}
-	strong {
-		font-weight: 500;
-	}
 	}
 }

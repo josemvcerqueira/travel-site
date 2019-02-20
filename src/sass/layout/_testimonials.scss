@@ -1,0 +1,97 @@
+.testimonials {
+	background: url("/assets/images/testimonials-bg.jpg") top center no-repeat;
+	background-size: cover;
+
+	&__layout {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 6.5rem;
+
+		@include respond(ipadPro) {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+		padding: 0 8rem;
+		padding-bottom: 7rem
+		}
+	}
+
+	&__icon {
+
+	height: auto;
+	width: 6.4rem;
+
+	@include respond(ipad) {
+		padding-top: 6.5rem;
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: text-bottom;
+		margin-right: 1rem;
+		}
+	}
+
+	&__heading{
+		font-size: 4.5rem;
+		color: $primary-blue;
+		text-align: center;
+		font-weight: 300;
+		width: 26rem;
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		padding-top: 4.5rem;
+
+		@include respond(ipad) {
+			width: 100%;
+			margin-bottom: 4.5rem;
+			padding-top: 0;
+		}
+	}
+
+	&__part-1{
+		width: 75vw;
+		margin-top: 12rem;
+		margin-right: auto;
+		margin-left: auto;
+
+		@include respond(ipad) {
+		width: 60vw;
+		}
+
+		@include respond(ipadPro) {
+		flex:1;
+		}
+	}
+
+	&__part-2{
+		width: 75vw;
+		margin-top: 12rem;
+		margin-right: auto;
+		margin-left: auto;
+
+		@include respond(ipad) {
+		width: 60vw;
+		}
+
+		@include respond(ipadPro) {
+		flex:1;
+		margin-right: 3rem;
+		margin-left: 3.5rem;
+		}
+	}
+
+	&__part-3{
+		margin-right: auto;
+		margin-left: auto;
+		width: 75vw;
+		margin-top: 12rem;
+
+		@include respond(ipad) {
+			width: 60vw;
+			}
+
+		@include respond(ipadPro) {
+			flex:1;
+		}
+	}
+}

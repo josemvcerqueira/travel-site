@@ -3,7 +3,15 @@
 }
 
 .margin-top {
-	margin-top: 2rem;
+	margin-top: 4rem;
+
+	@include respond(ipadPro) {
+			margin-top: 5.5rem;
+		}
+}
+
+.margin-top--small {
+	margin-top: 1.5rem;
 }
 
 .text-center {
