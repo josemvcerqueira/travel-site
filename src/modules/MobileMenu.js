@@ -1,6 +1,6 @@
 class MobileMenu {
 	constructor() {
-		this.icon = document.querySelector(".header__menu-icon");
+		this.icon = document.querySelector(".header__checkbox");
 		this.content = document.querySelector(".header__nav");
 		this.title = document.querySelector(".large-hero__text-content");
 	}

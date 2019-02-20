@@ -109,13 +109,19 @@
 		}
 	}
 
-	&__menu-icon {
-		width: 2rem;
-		height: 2rem;
+	&__checkbox {
+		display: none;
+	}
+
+	&__button {
 		background-color: $light-color-1;
+		height: 7rem;
+		width: 7rem;
+		border-radius: 50%;
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		top: 1.5rem;
+		right: 3.5rem;
+		z-index: 20;
 
 		@include respond(ipad) {
 			width: 4rem;
@@ -125,6 +131,66 @@
 		@include respond(ipadPro) {
 			display: none;
 		}
+	}
+
+	&__icon {
+		position: relative;
+		margin-top: 2rem;
+		margin-left: 0.725rem;
+
+		&,
+		&::after,
+		&::before {
+			width: 2.5rem;
+			height: 2px;
+			display: inline-block;
+			background-color: gray;
+		}
+
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			-webkit-transition: all 0.2s;
+			transition: all 0.2s;
+		}
+
+		&::before {
+			top: -0.9rem;
+		}
+
+		&::after {
+			top: 0.9rem;
+		}
+
+		@include respond(ipadPro) {
+			display: none;
+		}
+	}
+
+	&__button:hover &__icon:before {
+		top: -1rem;
+	}
+
+	&__button:hover &__icon:after {
+		top: 1rem;
+	}
+
+	&__checkbox:checked + &__button &__icon {
+		background-color: transparent;
+	}
+
+	&__checkbox:checked + &__button &__icon:before {
+		top: 0;
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+
+	&__checkbox:checked + &__button &__icon:after {
+		top: 0;
+		-webkit-transform: rotate(-135deg);
+		transform: rotate(-135deg);
 	}
 
 	&__large-screen {
