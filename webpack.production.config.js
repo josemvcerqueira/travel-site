@@ -5,10 +5,11 @@ const path = require("path"),
 	CleanWebpackPlugin = require("clean-webpack-plugin"),
 	HtmlWebpackPlugin = require("html-webpack-plugin"),
 	HtmlMinifierPlugin = require("html-minifier-webpack-plugin");
+require("@babel/polyfill");
 
 module.exports = {
 	mode: "production",
-	entry: "./src/index.js",
+	entry: ["@babel/polyfill", "./src/index.js" ],
 	output: {
 		filename: "bundle.[contenthash].js",
 		path: path.resolve(__dirname, "./dist"),
