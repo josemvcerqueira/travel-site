@@ -1,5 +1,4 @@
 .beginning {
-	background-color: green;
 	&__image {
 		@include respond(ipadPro) {
 			flex-basis: 37%;
