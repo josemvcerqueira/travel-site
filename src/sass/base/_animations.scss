@@ -8,3 +8,19 @@
 		transform: scale(1);
 	}
 }
+
+.header__large-screen--dark {
+	background-color: $secondary-blue !important;
+}
+
+.shrink {
+	@include respond(ipadPro) {
+		transform: scale(0.55) !important;
+	}
+}
+
+.grow {
+	@include respond(ipadPro) {
+		transform: scale(1) !important;
+	}
+}
