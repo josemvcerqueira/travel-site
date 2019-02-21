@@ -19,7 +19,8 @@
 	},
 	"homepage": "https://github.com/kamirake/travel-site#readme",
 	"dependencies": {
-		"normalize-scss": "^7.0.1"
+		"normalize-scss": "^7.0.1",
+		"waypoints": "^4.0.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
