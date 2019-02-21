@@ -202,6 +202,10 @@
 		visibility: visible;
 		align-items: center;
 
+		& a.is-current-link {
+			color: #fabb69;
+		}
+
 		@include respond(special) {
 			visibility: hidden;
 		}

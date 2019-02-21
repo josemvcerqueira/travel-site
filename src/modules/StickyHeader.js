@@ -5,6 +5,13 @@ class StickyHeader {
 		this.siteHeader = document.querySelector(".header__large-screen");
 		this.trigger = document.querySelector(".large-hero__subtitle");
 		this.logo = document.querySelector(".header__img");
+		this.sections = Array.from(document.querySelectorAll(".page-section"));
+		this.largeHeroParagraph = document.querySelector(
+			".large-hero__paragraph"
+		);
+		this.headerLinks = Array.from(
+			document.querySelectorAll(".header__large-screen a")
+		);
 	}
 
 	createHeaderWaypoint() {
@@ -33,6 +40,56 @@ class StickyHeader {
 			this.logo.classList.remove("shrink");
 			this.logo.classList.add("grow");
 		}
+	}
+
+	createPageSectionWaypoints() {
+		const self = this;
+		this.sections.forEach(el => {
+			new Waypoint({
+				element: self.largeHeroParagraph,
+				handler: () => {
+					self.headerLinks.forEach(el => {
+						el.classList.remove("is-current-link");
+					});
+				}
+			});
+
+			new Waypoint({
+				element: el,
+				handler: direction => {
+					if (direction === "down") {
+						let matchingHeaderLink = el.getAttribute(
+							"data-matching-link"
+						);
+						self.headerLinks.forEach(el => {
+							el.classList.remove("is-current-link");
+						});
+						document
+							.querySelector(matchingHeaderLink)
+							.classList.add("is-current-link");
+					}
+				},
+				offset: "30%"
+			});
+
+			new Waypoint({
+				element: el,
+				handler: direction => {
+					if (direction === "up") {
+						let matchingHeaderLink = el.getAttribute(
+							"data-matching-link"
+						);
+						self.headerLinks.forEach(el => {
+							el.classList.remove("is-current-link");
+						});
+						document
+							.querySelector(matchingHeaderLink)
+							.classList.add("is-current-link");
+					}
+				},
+				offset: "-35%"
+			});
+		});
 	}
 }
 

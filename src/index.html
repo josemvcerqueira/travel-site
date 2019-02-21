@@ -30,9 +30,9 @@
         <a class="header__nav__anchor" href="#" class="btn">Get in Touch</a>
         <nav>
           <ul class="header__nav__list">
-            <li class="header__nav__list__item"><a href="#our-beginning">Our Beginning</a></li>
-            <li class="header__nav__list__item"><a href="#features">Features</a></li>
-            <li class="header__nav__list__item"><a href="#testimonials">Testimonials</a></li>
+            <li class="header__nav__list__item"><a class="js-trigger" id="our-beginning-link" href="#our-beginning">Our Beginning</a></li>
+            <li class="header__nav__list__item"><a class="js-trigger" id="features-link" href="#feature">Features</a></li>
+            <li class="header__nav__list__item"><a class="js-trigger" id="testimonials-link" href="#testimonial">Testimonials</a></li>
           </ul>
         </nav>
       </div>
@@ -53,7 +53,7 @@
       </div>
   </div>
 
-  <div id="our-beginning" class="beginning padding-vertical">
+  <div id="our-beginning" class="beginning padding-vertical page-section" data-matching-link="#our-beginning-link">
     <div class="wrapper">
       <h2 class = "headline headline--centered headline--light">The first trip we planned <strong>was our own.</strong></h2>
       <h3 class = "headline headline--centered headline--orange headline--small headline--light">Ever since, we&rsquo;ve been working to <br> make travel <strong>better for everyone.</strong></h3>
@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  <div id="feature" class="padding-vertical bg-blue">
+  <div id="feature" class="padding-vertical bg-blue page-section" data-matching-link="#features-link">
     <div class="features wrapper">
     <h2 class="features__title"><img class="features__icon" src="assets/images/icons/star.svg">Our <strong>Features</strong></h2>
     <div class="features__layout">
@@ -109,7 +109,7 @@
     </div>
   </div>
 
-  <div class=" testimonials " id="testimonial">
+  <div class="testimonials page-section" id="testimonial" data-matching-link="#testimonials-link">
     <div class="wrapper">
       <div class="testimonials__header">
         <h2 class="testimonials__heading"><img class="center-images testimonials__icon" src="assets/images/icons/comment.svg">Real <strong>Testimonials</strong></h2>

@@ -2,6 +2,7 @@ import "./sass/main.scss";
 import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
+import MoveTo from "../node_modules/moveto/src/moveTo";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.events();
@@ -16,3 +17,27 @@ testimonials.createWayPoints();
 
 const stickyHeader = new StickyHeader();
 stickyHeader.createHeaderWaypoint();
+stickyHeader.createPageSectionWaypoints();
+
+document.addEventListener("DOMContentLoaded", function() {
+	const easeFunctions = {
+		easeInQuad: function(t, b, c, d) {
+			t /= d;
+			return c * t * t + b;
+		},
+		easeOutQuad: function(t, b, c, d) {
+			t /= d;
+			return -c * t * (t - 2) + b;
+		}
+	};
+	const moveTo = new MoveTo(
+		{
+			ease: "easeInQuad"
+		},
+		easeFunctions
+	);
+	const triggers = Array.from(document.querySelectorAll(".js-trigger"));
+	triggers.forEach(el => {
+		moveTo.registerTrigger(el);
+	});
+});

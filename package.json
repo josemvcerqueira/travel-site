@@ -19,6 +19,7 @@
 	},
 	"homepage": "https://github.com/kamirake/travel-site#readme",
 	"dependencies": {
+		"moveto": "^1.8.0",
 		"normalize-scss": "^7.0.1",
 		"waypoints": "^4.0.1"
 	},
