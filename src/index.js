@@ -3,6 +3,7 @@ import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import StickyHeader from "./modules/StickyHeader";
 import MoveTo from "../node_modules/moveto/src/moveTo";
+import Modal from "./modules/Modal";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.events();
@@ -18,6 +19,9 @@ testimonials.createWayPoints();
 const stickyHeader = new StickyHeader();
 stickyHeader.createHeaderWaypoint();
 stickyHeader.createPageSectionWaypoints();
+
+const modal = new Modal();
+modal.events();
 
 document.addEventListener("DOMContentLoaded", function() {
 	const easeFunctions = {

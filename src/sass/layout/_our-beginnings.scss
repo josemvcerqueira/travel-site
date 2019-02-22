@@ -8,6 +8,12 @@
 	&__text {
 		margin-top: 2rem;
 
+		& a,
+		strong {
+			color: $primary-orange;
+			text-decoration-line: none;
+		}
+
 		@include respond(ipadPro) {
 			margin-top: 0rem;
 			display: flex;

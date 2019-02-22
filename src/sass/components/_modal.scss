@@ -1,0 +1,43 @@
+.modal {
+	position: fixed;
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.94);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.2);
+	transition: all 0.3s ease-out;
+
+	&--is-visible {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	&__paragraph {
+		text-align: center;
+		font-size: 1.75rem;
+		font-weight: 300;
+		line-height: 1.65;
+	}
+
+	&__close {
+		position: absolute;
+		top: 1.75rem;
+		right: 2rem;
+		font-size: 2.5rem;
+		transform: scalex(1.4);
+		transform-origin: 100% 0;
+		color: $primary-blue;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+
+		&:hover {
+			color: $primary-orange;
+			font-size: 3rem;
+		}
+	}
+}
