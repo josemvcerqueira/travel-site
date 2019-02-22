@@ -1,15 +1,16 @@
 const path = require("path"),
-	UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
 	MiniCssExtractPlugin = require("mini-css-extract-plugin"),
 	OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin"),
 	CleanWebpackPlugin = require("clean-webpack-plugin"),
 	HtmlWebpackPlugin = require("html-webpack-plugin"),
-	HtmlMinifierPlugin = require("html-minifier-webpack-plugin");
+	HtmlMinifierPlugin = require("html-minifier-webpack-plugin"),
+	TerserPlugin = require("terser-webpack-plugin");
+
 require("@babel/polyfill");
 
 module.exports = {
 	mode: "production",
-	entry: ["@babel/polyfill", "./src/index.js" ],
+	entry: ["@babel/polyfill", "./src/index.js"],
 	output: {
 		filename: "bundle.[contenthash].js",
 		path: path.resolve(__dirname, "./dist"),
@@ -18,12 +19,12 @@ module.exports = {
 	},
 	optimization: {
 		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
+			new TerserPlugin({
 				parallel: true,
-				sourceMap: true
-			}),
-			new OptimizeCssAssetsPlugin()
+				terserOptions: {
+					ecma: 6
+				}
+			})
 		],
 		minimize: true
 	},
@@ -71,6 +72,14 @@ module.exports = {
 		new HtmlMinifierPlugin({
 			html5: true,
 			collapseWhitespace: true
+		}),
+		new OptimizeCssAssetsPlugin({
+			assetNameRegExp: /\.optimize\.scss$/g,
+			cssProcessor: require("cssnano"),
+			cssProcessorPluginOptions: {
+				preset: ["default", { discardComments: { removeAll: true } }]
+			},
+			canPrint: true
 		})
 	]
 };
